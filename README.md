@@ -16,7 +16,7 @@ Puis exécuter l'API
 
 docker-compose up --build
 
-Celui-ci va charger pendant une certaine durée. Après cela vous pourrez tester en ouvrant une page web avec localhost:3000 et localhost:80
+Celui-ci va charger pendant une certaine durée. Après cela vous pourrez tester en ouvrant une page web avec -localhost:3000 et -localhost:80
 
 
 
