@@ -2,48 +2,24 @@
 
 *Tested with `rust v1.82.0` et `node 23.0.0`.*
 
-## Development
+Commencez par cloner le dépôt du projet avec la commande suivante:
 
-### API
+En bash,
 
-#### Basics
+git clone https://github.com/kuramento/sdv-m1do-containers-project.git
 
-Use `cargo run` to start the dev environment.
+Ce rendre dans le dossier,
 
-You can also install [cargo-watch](https://crates.io/crates/cargo-watch) to watche over your project's source for changes, and runs Cargo commands when they occur : `cargo-watch -x run`.
+cd sdv-m1do-containers-project
 
-#### Using Docker
+Puis exécuter l'API
 
-> TODO
+docker-compose up --build
 
-### Web
+Celui-ci va charger pendant une certaine durée. Après cela vous pourrez tester en ouvrant une page web avec localhost:3000 et localhost:80
 
-#### Basics
 
-Use `npm install` to install all dependancies, and `npm run dev` to start the dev environment.
 
-#### Using Docker
 
-> TODO
 
-## Production
 
-### API
-
-#### Basics
-
-Run `cargo build --release` to build and compile the app. This will create an executable in `/target/release/sdv-api`.
-
-#### Using Docker
-
-> TODO
-
-### Web
-
-#### Basics
-
-Run `npm run build` to build the application, and run `npm run start` to start the Node.js server. 
-
-#### Using Docker
-
-> TODO
