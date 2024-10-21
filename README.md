@@ -23,6 +23,10 @@ Celui-ci va charger pendant une certaine durée. Après cela vous pourrez tester
 Cela devrait ouvrir une page avec marqué "Hello Sup de Vinci Rennes!" 
 Et une autre avec un texte et le logo de SDV.
 
+Pour les liens du docker hub contenant API et le WEB veuillez vous rendre sur les liens suivant: 
+
+- https://hub.docker.com/repository/docker/clementdelaunoy/clementdelaunoy_sdv-m1do-containers-project/general
+- https://hub.docker.com/repository/docker/clementdelaunoy/clementdelaunoy_sdv-m1do-containers-project_web/general
 
 
 
