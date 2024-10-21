@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  api:
+    build:
+      context: ./sdv-api
+      dockerfile: Dockerfile
+    volumes:
+      - ./sdv-api:/app
+    ports:
+      - "80:80"
+    command: ["cargo", "run", "--release"]
+
+  web:
+    build:
+      context: ./sdv-web
+      dockerfile: Dockerfile
+    volumes:
+      - ./sdv-web:/app
+    ports:
+      - "3000:3000"
+    environment:
+        - API_URL=http://api
+    command: ["npm", "run", "dev"]
+
