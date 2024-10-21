@@ -25,7 +25,10 @@ Et une autre avec un texte et le logo de SDV.
 
 Pour les liens du docker hub contenant API et le WEB veuillez vous rendre sur les liens suivant: 
 
+## API
 - https://hub.docker.com/repository/docker/clementdelaunoy/clementdelaunoy_sdv-m1do-containers-project/general
+
+## WEB
 - https://hub.docker.com/repository/docker/clementdelaunoy/clementdelaunoy_sdv-m1do-containers-project_web/general
 
 
