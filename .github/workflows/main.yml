@@ -25,20 +25,20 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build API Dev Image
-        run: docker build -f sdv-api/Dockerfile -t myapp-api-dev:latest ./sdv-api
+        run: docker build -f sdv-api/Dockerfile -t clementdelaunoy_sdv-m1do-containers-project:latest ./sdv-api
 
       - name: Build Web Dev Image
-        run: docker build -f sdv-web/Dockerfile -t myapp-web-dev:latest ./sdv-web
+        run: docker build -f sdv-web/Dockerfile -t clementdelaunoy_sdv-m1do-containers-project_web:latest ./sdv-web
 
       - name: Tag and Push API Dev Image to First Repo
         run: |
-          docker tag myapp-api-dev:latest ${{ secrets.DOCKER_USERNAME }}/sdv-api-dev:latest
-          docker push ${{ secrets.DOCKER_USERNAME }}/sdv-api-dev:latest
+          docker tag clementdelaunoy_sdv-m1do-containers-project:latest ${{ secrets.DOCKER_USERNAME }}/clementdelaunoy_sdv-m1do-containers-project:latest
+          docker push ${{ secrets.DOCKER_USERNAME }}/clementdelaunoy_sdv-m1do-containers-project:latest
 
       - name: Tag and Push Web Dev Image to First Repo
         run: |
-          docker tag myapp-web-dev:latest ${{ secrets.DOCKER_USERNAME }}/sdv-web-dev:latest
-          docker push ${{ secrets.DOCKER_USERNAME }}/sdv-web-dev:latest
+          docker tag clementdelaunoy_sdv-m1do-containers-project_web:latest ${{ secrets.DOCKER_USERNAME }}/clementdelaunoy_sdv-m1do-containers-project_web:latest
+          docker push ${{ secrets.DOCKER_USERNAME }}/clementdelaunoy_sdv-m1do-containers-project_web:latest
 
       - name: Log in to Docker Hub (Second Repo)
         uses: docker/login-action@v2
@@ -48,10 +48,10 @@ jobs:
 
       - name: Tag and Push API Dev Image to Second Repo
         run: |
-          docker tag myapp-api-dev:latest ${{ secrets.DOCKER_USERNAME }}/sdv-api-dev:latest
-          docker push ${{ secrets.DOCKER_USERNAME }}/sdv-api-dev:latest
+          docker tag clementdelaunoy_sdv-m1do-containers-project:latest ${{ secrets.DOCKER_USERNAME }}/clementdelaunoy_sdv-m1do-containers-project:latest
+          docker push ${{ secrets.DOCKER_USERNAME }}/clementdelaunoy_sdv-m1do-containers-project:latest
 
       - name: Tag and Push Web Dev Image to Second Repo
         run: |
-          docker tag myapp-web-dev:latest ${{ secrets.DOCKER_USERNAME }}/sdv-web-dev:latest
-          docker push ${{ secrets.DOCKER_USERNAME }}/sdv-web-dev:latest
+          docker tag clementdelaunoy_sdv-m1do-containers-project_web:latest ${{ secrets.DOCKER_USERNAME }}/clementdelaunoy_sdv-m1do-containers-project_web:latest
+          docker push ${{ secrets.DOCKER_USERNAME }}/clementdelaunoy_sdv-m1do-containers-project_web:latest
